@@ -10,6 +10,7 @@ public class RandomUtils {
         System.out.println(getRandomEmail());
         System.out.println(getRandomAddress());
         System.out.println(getRandomInt(1, 5));
+        System.out.println(getRandomPhone());
     }
 
     public static String getRandomString(int len) {
@@ -34,8 +35,9 @@ public class RandomUtils {
         return ThreadLocalRandom.current().nextInt(min, max + 1);
     }
 
-    public static int getRandomPhone(int min, int max) {
-        return ThreadLocalRandom.current().nextInt(min, max + 1);
+    public static String getRandomPhone() {
+        return String.format("+%s (%s) %s - %s - %s", getRandomInt(1, 9), getRandomInt(111, 999),
+                getRandomInt(111, 999), getRandomInt(11, 99), getRandomInt(11, 99));
     }
 
 }
