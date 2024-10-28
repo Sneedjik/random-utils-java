@@ -40,4 +40,16 @@ public class RandomUtils {
                 getRandomInt(111, 999), getRandomInt(11, 99), getRandomInt(11, 99));
     }
 
+    public static String getRandomGender() {
+        String[] genders = {"Male", "Female", "Other"};
+
+        return getRandomItemFromArray(genders);
+    }
+
+    public static String getRandomItemFromArray(String[] array) {
+        int index = getRandomInt(0, array.length - 1);
+
+        return array[index];
+    }
+
 }
