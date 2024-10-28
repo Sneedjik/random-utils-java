@@ -11,6 +11,7 @@ public class RandomUtils {
         System.out.println(getRandomAddress());
         System.out.println(getRandomInt(1, 5));
         System.out.println(getRandomPhone());
+        System.out.println(getRandomGender());
     }
 
     public static String getRandomString(int len) {
